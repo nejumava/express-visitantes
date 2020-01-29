@@ -15,7 +15,7 @@ var schema = mongoose.Schema({
 var Visitor = mongoose.model("Visitor", schema);
 
 app.get('/', (req, res) => {
-    var nombre = req.params.name;
+    var nombre = req.query.name;
     if(nombre == null || nombre == ''){
         nombre = "Anónimo";
     }
